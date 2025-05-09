@@ -1,0 +1,556 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+
+/*  A Roots  */
+
+:root {
+    --text-color: #f5f5f5;
+    --hover-color: #ff00d9;
+    --bg-color: #000f26;
+    --secon-bg-color: #292e33;
+    --big-font: 2.5rem;
+    --norma-font: 2rem;
+    --neon-box-shadow: 0 0 .5 #12f7ff;
+    --h2-font: 3rem;
+    --font-neon-text-shadow: 0 0 10px rgba(34, 0, 255, 0.3),
+        0 0 20px rgba(70, 0, 211, 0.3),
+        0 0 30px rgba(140, 0, 255, 0.3),
+        0 0 40px rgba(157, 0, 255, 0.3),
+        0 0 70px rgba(255, 0, 217, 0.3),
+        0 0 80px rgba(59, 0, 255, 0.3),
+        0 0 100px rgba(255, 0, 153, 0.3),
+        0 0 150px rgba(18, 247, 255, 0.3);
+}
+
+
+/*  FOR ALL  */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/*  BODY  */
+
+body {
+    min-height: 400vh;
+    overflow-x: hidden;
+    background: linear-gradient(#000000, #0e0e0e);
+}
+
+/*  Header  */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+    z-index: 10000;
+}
+
+/* STICKY HEADER/NAVBAR  */
+
+header.sticky {
+    padding: 15px 100px;
+    background: #000000;
+    opacity: 0.9;
+}
+
+header.sticky .logo,
+header.sticky ul li a {
+    color: #ffffff;
+}
+
+header.sticky .jagruk {
+    background-color: #fffffffb;
+    color: #360044;
+}
+
+header.sticky ul li a:hover {
+    background-color: #ffffff;
+}
+
+
+
+/*  HEADER LOGO  */
+
+header .logo {
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2rem;
+    transition: 0.6s;
+}
+
+
+/*  HEADER UL  */
+
+header ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*  UL LI  */
+
+header ul li {
+    list-style: none;
+    margin-left: 20px;
+}
+
+/*  UL LI A  */
+
+header ul li a {
+    text-decoration: none;
+    padding: 6px 20px;
+    color: var(--text-color);
+    border-radius: 10px;
+    font-weight: 600;
+    transition: 0.6s;
+}
+
+/*  UL LI A HOVER  */
+
+header ul li a:hover,
+header ul li a.jagruk {
+    background-color: #e8e8e8;
+    color: #360044;
+}
+
+/*  SECTION IMAGES  */
+
+section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section::before {
+    content: '';
+    /*----> this content plays a great role in this blur outer line concept  */
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, #040005, transparent);
+    z-index: 10000;
+    overflow: hidden;
+}
+
+section img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+section img#front {
+    z-index: 10;
+}
+
+/*  SECTION PARALLEL SCROOL TEXT  */
+
+#text {
+    position: absolute;
+    /*right: 10px;*/
+    color: #ffffff;
+    background-color: #0a0a0a3e;
+    white-space: nowrap;
+    font-size: 7.5vw;
+    font-size: 3.5em;
+    z-index: 9;
+}
+
+
+/*  button of parallax  */
+
+#btn {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 30px;
+    border-radius: 10px;
+    background: #fff;
+    color: #360044;
+    font-size: 1.5em;
+    font-weight: 500;
+    z-index: 9;
+    transform: translateY(100px);
+}
+
+
+/* Info  */
+
+.info {
+    position: relative;
+    padding: 100px;
+    background: linear-gradient(#000000, #0e0e0e);
+    min-height: 50vh;
+}
+
+/*  h2  */
+
+.info h2 {
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+/*  p  */
+
+.info p {
+    font-size: 1.2em;
+    color: #fff;
+}
+
+
+hr {
+    color: #f5f5f5;
+    padding: 1px;
+    width: 150px;
+    height: 2px;
+    border: solid 10px;
+    border-radius: 50px;
+}
+
+/* Info-01  */
+
+.info-1 {
+    position: relative;
+    padding: 100px;
+    background: linear-gradient(#0e0e0e, #15006b, #000000);
+    min-height: 50vh;
+}
+
+
+.info-1::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#c2038c, #0015ff50, #670080);
+    clip-path: circle(30% at right 70%);
+}
+
+.info-1::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#0e0e0e, #0015ff, #c2038c);
+    clip-path: circle(20% at 10% 10%);
+}
+
+/*  container  */
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    z-index: 1;
+}
+
+/* container & card  */
+
+.container .card {
+    position: relative;
+    width: 280px;
+    height: 400px;
+    margin: 30px;
+    box-shadow: 20px 20px 50 rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 4px solid rgba(255, 255, 255, 0.1);
+    border-left: 4px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+}
+
+/* container & card & content  */
+
+.container .card .content {
+    padding: 20px;
+    text-align: center;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: 0.5s;
+}
+
+
+.container .card:hover .content {
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+.container .card .content img {
+    position: absolute;
+    top: -50px;
+    right: 10px;
+    height: 8em;
+    width: 8em;
+    opacity: 0.7;
+}
+
+.container .card .content h3 {
+    font-size: 1.8em;
+    color: #fff;
+    z-index: 1;
+}
+
+
+.container .card .content p {
+    font-size: 1em;
+    color: #dddddd;
+    font-weight: 300;
+}
+
+.container .card .content a {
+    position: relative;
+    display: inline-block;
+    padding: 8px 20px;
+    margin-top: 15px;
+    background: #f5f5f5;
+    text-decoration: none;
+    color: #0f0049c1;
+    border-radius: 10px;
+    font-weight: 500;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+/*  NEXT BUTTON  */
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 10vh;
+    flex-direction: column;
+    gap: 50px;
+}
+
+/*  Button a  */
+
+.button a {
+    position: relative;
+    background: #e8e8e8;
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    padding: 10px 30px;
+    transition: 0.5s;
+}
+
+.button a:hover {
+    background: var(--clr);
+    color: var(--clr);
+    letter-spacing: 0.3em;
+    box-shadow: 0 0 35px var(--clr);
+}
+
+.button a::before {
+    content: '';
+    position: absolute;
+    inset: 2px;
+    background: #15006a;
+}
+
+.button a span {
+    position: relative;
+    z-index: 1;
+}
+
+.button a i {
+    position: absolute;
+    inset: 0;
+    display: block;
+}
+
+/*  a , i before  */
+
+.button a i::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 80%;
+    width: 10px;
+    height: 4px;
+    background: #15006a;
+    transform: translateX(-50%) skewX(325deg);
+    transition: 0.5s;
+}
+
+.button a:hover i::before {
+    width: 20px;
+    left: 20%;
+}
+
+/*  a,i after  */
+
+.button a i::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 20%;
+    width: 10px;
+    height: 4px;
+    background: #15006a;
+    transform: translateX(-50%) skewX(325deg);
+    transition: 0.5s;
+}
+
+.button a:hover i::after {
+    width: 20px;
+    left: 80%;
+}
+
+
+/*  BHRAMAND BETWEEN LOGO PIC  */
+
+.chinna {
+    width: 100%;
+    padding: 250px;
+    letter-spacing: 10px;
+    align-items: center;
+    text-align: center;
+    font-size: xx-large;
+    font-weight: 900;
+    font-family: 'Poppins' sans-serif;
+    background: linear-gradient(#000000, #000f26);
+    min-height: 50vh;
+}
+
+.chinna h1 {
+    color: whitesmoke;
+    cursor: default;
+}
+
+.chinna k {
+    transition: transform 0.5s;
+    width: auto;
+    padding-bottom: 20px;
+}
+
+.chinna k:hover {
+    padding-top: 10px;
+    color: #d5d5d5;
+    transform: translateY(-10px);
+}
+
+.chinna d {
+    color: #fff;
+}
+
+.chinna d:hover {
+    color: #00f1f9;
+}
+
+/*----------------------------- FAQ'S ----------------------*/
+
+.main {
+    background: linear-gradient(#000f26, #000000);
+}
+
+.faq {
+    color: white;
+}
+
+.faq h2 {
+    text-align: center;
+    padding: 34px;
+    font-size: 42px;
+    font-weight: 900;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.faqbox {
+    display: flex;
+    justify-content: space-between;
+    padding: 24px;
+    background-color: #2d2d2d;
+    color: white;
+    max-width: 60vw;
+    margin: 34px auto;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.faqbox:hover {
+    background-color: #414141;
+    transition: all 0.2s ease-out;
+}
+
+
+
+/*---------------- FOOTER ---------------*/
+footer {
+    color: white;
+    margin: auto;
+    width: 100%;
+    padding: 10px;
+    background: linear-gradient(#000000, #0e0e0e);
+}
+
+footer .questions {
+
+    color: rgba(255, 255, 255, 0.7);
+    padding: 34px 0px;
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    color: white;
+}
+
+
+.footer a {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.footer-item {
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+}
+
+.footer-item #media {
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+.footer-item .big {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+}
